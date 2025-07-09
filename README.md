@@ -24,7 +24,7 @@ To improve generalization and prevent overfitting, L2 regularization was introdu
   <img src="RegularizedProblem.png" alt="Regularized Logistic Regression Objective" width="480"/>
 </p>
 
-We conducted experiments by varying the regularization coefficient λ (lambda) to assess its effect on classification performance. The results are discussed below.
+I did experiments by varying the regularization coefficient λ (lambda) to assess its effect on classification performance. The results are discussed below.
 
 ## Methodology
 

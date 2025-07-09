@@ -31,7 +31,7 @@ The logistic regression problem is cast as an unconstrained optimization task. T
 The figure below shows the convergence of the cost function with the number of iterations. The accelerated gradient method (black) reaches a lower cost significantly faster than standard gradient descent (red).
 
 <p align="center">
-  <img src="results/Convergence-study.png" alt="Convergence Plot" width="500"/>
+  <img src="Convergence-study.png" alt="Convergence Plot" width="500"/>
 </p>
 
 ### Effect of Regularization
@@ -39,7 +39,7 @@ The figure below shows the convergence of the cost function with the number of i
 Regularization helps prevent overfitting by penalizing large model weights. The plot below shows the effect of varying the regularization strength λ on the model's misclassification rate.
 
 <p align="center">
-  <img src="results/Regularization-effect.png" alt="Regularization Plot" width="500"/>
+  <img src="Regularization-effect.png" alt="Regularization Plot" width="500"/>
 </p>
 
 The optimal performance is observed for small values of λ, which balance bias and variance. As λ increases too much, underfitting leads to a degradation in accuracy.

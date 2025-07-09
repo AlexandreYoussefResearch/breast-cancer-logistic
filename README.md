@@ -13,7 +13,7 @@ The goal is to predict whether a tumor is malignant or benign using logistic reg
 The logistic regression problem is cast as an unconstrained optimization task. The loss function is minimized over the training set to find the best decision boundary.
 
 <p align="center">
-  <img src="results/Problem.png" alt="Logistic Regression Objective Function" width="480"/>
+  <img src="Problem.png" alt="Logistic Regression Objective Function" width="480"/>
 </p>
 
 ## Methodology

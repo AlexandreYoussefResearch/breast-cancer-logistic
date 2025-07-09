@@ -56,5 +56,5 @@ We observe that small values of λ improve classification accuracy. However, lar
 
 ## Contact
 
-For any questions or collaborations, feel free to reach out:  
+For any additional questions, feel free to reach out:  
 📧 alexandre.youssef.pro@gmail.com

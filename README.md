@@ -21,13 +21,6 @@ The goal is to predict whether a tumor is malignant or benign using logistic reg
 - Exploration of regularization effects
 - Evaluation using classification accuracy and cost function minimization
 
-## Structure
-
-- `main.py`: Contains the training loop, evaluation metrics, and plotting functions
-- `model.py`: Defines the logistic regression model and gradient computations
-- `utils.py`: Preprocessing functions (normalization, label encoding)
-- `data/`: (Optional) Directory for storing the dataset if used locally
-- `report.pdf`: Technical report detailing the methodology and results
 
 ## Results
 

@@ -16,6 +16,16 @@ The logistic regression problem is cast as an unconstrained optimization task. T
   <img src="Problem.png" alt="Logistic Regression Objective Function" width="480"/>
 </p>
 
+## Regularization
+
+To improve generalization and prevent overfitting, L2 regularization was introduced. This modifies the cost function by adding a penalty term proportional to the squared norm of the model parameters. The updated optimization problem is shown below:
+
+<p align="center">
+  <img src="RegularizedProblem.png" alt="Regularized Logistic Regression Objective" width="480"/>
+</p>
+
+We conducted experiments by varying the regularization coefficient λ (lambda) to assess its effect on classification performance. The results are discussed below.
+
 ## Methodology
 
 - Binary classification using logistic regression
@@ -42,7 +52,7 @@ Regularization helps prevent overfitting by penalizing large model weights. The 
   <img src="Regularization-effect.png" alt="Regularization Plot" width="500"/>
 </p>
 
-The optimal performance is observed for small values of λ, which balance bias and variance. As λ increases too much, underfitting leads to a degradation in accuracy.
+We observe that small values of λ improve classification accuracy. However, large values can lead to underfitting and degrade model performance.
 
 ## Contact
 

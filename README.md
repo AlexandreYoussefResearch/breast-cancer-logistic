@@ -1,42 +1,50 @@
-# Breast Cancer Diagnosis via First-Order Optimization
+# Breast Cancer Diagnosis – Logistic Regression with First-Order Methods
 
-This project explores the use of first-order optimization algorithms for binary classification through logistic regression, applied to the Breast Cancer Wisconsin (Diagnostic) dataset. The work investigates the convergence behavior of different gradient-based methods and the effect of L2 regularization on generalization performance.
+This project implements and analyzes first-order optimization algorithms for binary classification using logistic regression. The objective is to identify whether a tumor is malignant or benign based on diagnostic features.
+
+The analysis is based on the [Breast Cancer Wisconsin (Diagnostic) dataset](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic), and includes both algorithmic convergence and regularization studies.
 
 ## Objective
 
 The goal is to predict whether a tumor is malignant or benign using logistic regression, optimized via gradient descent. The project emphasizes the mathematical foundation and practical implementation of first-order methods, with a focus on convergence behavior and regularization.
 
+## Problem Formulation
+
+The logistic regression problem is cast as an unconstrained optimization task. The loss function is minimized over the training set to find the best decision boundary.
+
+<p align="center">
+  <img src="results/Problem.png" alt="Logistic Regression Objective Function" width="480"/>
+</p>
+
 ## Methodology
 
-- Binary classification using logistic regression  
-- Implementation of batch gradient descent with configurable step size  
-- Analysis of convergence based on learning rate  
-- Exploration of regularization effects  
-- Evaluation using classification accuracy and cost function minimization  
-
-## Regularization
-
-Regularization is a technique used to prevent overfitting by penalizing large model weights. In this project, we use L2 regularization, which adds a term proportional to the squared norm of the weight vector to the loss function. This encourages the model to find simpler, more generalizable solutions. The strength of the regularization is controlled by a parameter \( \lambda \): higher values increase the penalty on large weights.
-
-Mathematically, the regularized cost function becomes:
-\[
-J(\theta) = \frac{1}{m} \sum_{i=1}^{m} \log(1 + \exp(-y^{(i)} \theta^\top x^{(i)})) + \frac{\lambda}{2} \|\theta\|^2
-\]
+- Binary classification using logistic regression
+- Implementation of batch gradient descent with configurable step size
+- Comparison of plain vs accelerated (Nesterov) gradient methods
+- Exploration of L2 regularization (Ridge penalty)
+- Evaluation using misclassification rate and loss convergence
 
 ## Results
 
-### Convergence of Optimization Algorithms
+### Convergence of Gradient vs Accelerated Methods
 
-The plot below shows the decrease in the objective function \( f(\theta_k) \) over iterations \( k \) for both methods:
+The figure below shows the convergence of the cost function with the number of iterations. The accelerated gradient method (black) reaches a lower cost significantly faster than standard gradient descent (red).
 
-![Convergence of Optimization Methods](Convergence-study.png)
-
-The accelerated gradient method (black) achieves faster convergence than standard gradient descent (red), reaching lower values of the loss function in fewer iterations.
+<p align="center">
+  <img src="results/Convergence-study.png" alt="Convergence Plot" width="500"/>
+</p>
 
 ### Effect of Regularization
 
-The plot below shows how the misclassification rate varies with the regularization parameter \( \lambda \):
+Regularization helps prevent overfitting by penalizing large model weights. The plot below shows the effect of varying the regularization strength λ on the model's misclassification rate.
 
-![Effect of Regularization](Regularization-effect.png)
+<p align="center">
+  <img src="results/Regularization-effect.png" alt="Regularization Plot" width="500"/>
+</p>
 
-Regularization helps control overfitting. The optimal classification accuracy is obtained for \( \lambda \approx 0.2 \), minimizing misclassification around 3.1%.
+The optimal performance is observed for small values of λ, which balance bias and variance. As λ increases too much, underfitting leads to a degradation in accuracy.
+
+## Contact
+
+For any questions or collaborations, feel free to reach out:  
+📧 alexandre.youssef.pro@gmail.com
